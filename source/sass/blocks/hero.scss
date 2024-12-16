@@ -1,0 +1,56 @@
+.hero__slider {
+  position: relative;
+}
+
+.hero__list {
+  @include list-reset;
+}
+
+.hero__item {
+  position: relative;
+  min-height: 568px;
+
+  @media (min-width: $tablet) {
+    min-height: 1034px;
+  }
+
+  @media (min-width: $desktop) {
+    min-height: 800px;
+  }
+}
+
+.hero__pagination-list {
+  @include list-reset;
+  position: absolute;
+  display: flex;
+  column-gap: 20px;
+  left: 50%;
+  bottom: 40px;
+  transform: translateX(-50%);
+  z-index: 1;
+
+  @media (min-width: $desktop) {
+    left: initial;
+    transform: initial;
+    bottom: 92px;
+    right: 120px;
+  }
+}
+
+.hero__pagination-list .swiper-pagination-bullet {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid $color-white;
+  border-radius: 50%;
+  background-color: transparent;
+
+  @media (min-width: $tablet) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.hero__pagination-list .swiper-pagination-bullet-active {
+  background-color: $color-white;
+}

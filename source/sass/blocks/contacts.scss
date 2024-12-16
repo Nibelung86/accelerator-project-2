@@ -1,0 +1,16 @@
+.contacts__container {
+  padding-block: 20px;
+}
+
+.contacts__text-wrapper {
+  padding-inline: 15px;
+}
+
+.contacts__list {
+  @include list-reset;
+}
+
+.contacts__map-img {
+  display: block;
+  margin-top: 30px;
+}

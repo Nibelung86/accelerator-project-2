@@ -9,22 +9,135 @@
   </head>
 
   <body class="page-body">
-    <!-- пример использования спрайта -->
-    <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
-    <svg>
-      <use href="/__spritemap#sprite-user"></use>
-    </svg>
-    <!-- примеры требуемых атрибутов data-test="*" -->
-    <div data-test="header">header</div>
-    <div data-test="hero">hero</div>
-    <div data-test="tours">tours</div>
-    <div data-test="training">training</div>
-    <div data-test="about">about</div>
-    <div data-test="reviews">reviews</div>
-    <div data-test="adv">adv</div>
-    <div data-test="gallery">gallery</div>
-    <div data-test="form">form</div>
-    <div data-test="footer">footer</div>
+    <!-- Хэдер с навигацией -->
+    <header class="page-header" data-test="header">
+      <div class="page-header__container container">
+        <img class="page-header__logo" src="img/logo.svg" alt="Логотип Lifetour - организация походов в горы" width="142" height="42">
+        <nav class="page-header__nav main-nav main-nav--closed" aria-label="Открыть навигациию.">
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#tours">Туры</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#training">Обучение</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#about">О нас</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#reviews">Отзывы</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#gallery">Фотографии</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#contacts">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <a class="page-header__phone-link" href="tel:+7800000000">8 800 000-00-00</a>
+      </div>
+    </header>
+    <main>
+      <h1 class="visually-hidden">Организация туров в горы.</h1>
+      <!-- Hero-блок + слайдер -->
+      <section class="hero" data-test="hero">
+        <h2 class="visually-hidden">Лучшие туры этого сезона.</h2>
+        <div class="hero__slider swiper container">
+          <ul class="hero__list swiper-wrapper">
+            <li class="hero__item hero-card swiper-slide">
+                <picture>
+                  <source type="image/jpeg" media="(min-width: 1440px)" srcset="img/hero/hero-1-desktop.jpg 1x, img/hero/hero-1-desktop@2x.jpg 2x" width="1440" height="800">
+                  <source type="image/jpeg" media="(min-width: 768px)" srcset="img/hero/hero-1-tablet.jpg 1x, img/hero/hero-1-tablet@2x.jpg 2x" width="768" height="1034">
+                  <img class="hero-card__image" src="img/hero/hero-1-mobile.jpg" srcset="img/hero/hero-1-mobile@2x.jpg 2x" width="320" height="568" alt="Вид на горы Кавказа.">
+                </picture>
+              <div class="hero-card__text-wrapper">
+                <h3>Захватывающие вершины Кавказа</h3>
+                <p>В сопровождении опытных гидов вы пройдёте через&nbsp;потрясающие ландшафты и совершите восход на&nbsp;вершину горы Чегет.</p>
+                <a class="hero-card__tour-link button" href="#">Смотреть тур</a>
+                <ul class="hero-card__info-list">
+                  <li class="hero-card__info-item hero-card__info-item--duration">6 дней/5 ночей</li>
+                  <li class="hero-card__info-item hero-card__info-item--level">Высокая сложность</li>
+                </ul>
+              </div>
+            </li>
+            <li class="hero__item hero-card swiper-slide">
+              <picture>
+                <source type="image/jpeg" media="(min-width: 1440px)" srcset="img/hero/hero-2-desktop.jpg 1x, img/hero/hero-2-desktop@2x.jpg 2x" width="1440" height="800">
+                <source type="image/jpeg" media="(min-width: 768px)" srcset="img/hero/hero-2-tablet.jpg 1x, img/hero/hero-2-tablet@2x.jpg 2x" width="768" height="1034">
+                <img class="hero-card__image" src="img/hero/hero-2-mobile.jpg" srcset="img/hero/hero-2-mobile@2x.jpg 2x" width="320" height="568" alt="Вид на горы Эльбруса">
+              </picture>
+              <div class="hero-card__text-wrapper">
+                <h3>Невероятная природа Камчатки</h3>
+                <p>Незабываемое приключение, во&nbsp;время которого вы&nbsp;отправитесь в&nbsp;путешествие по&nbsp;одному из&nbsp;самых нетронутых уголков дикой природы в&nbsp;мире.</p>
+                <a class="hero-card__tour-link button" href="#">Смотреть тур</a>
+                <ul class="hero-card__info-list">
+                  <li class="hero-card__info-item hero-card__info-item--duration">9 дней/10 ночей</li>
+                  <li class="hero-card__info-item hero-card__info-item--level">Средняя сложность</li>
+                </ul>
+              </div>
+            </li>
+            <li class="hero__item hero-card swiper-slide">
+              <picture>
+                <source type="image/jpeg" media="(min-width: 1440px)" srcset="img/hero/hero-3-desktop.jpg 1x, img/hero/hero-3-desktop@2x.jpg 2x" width="1440" height="800">
+                <source type="image/jpeg" media="(min-width: 768px)" srcset="img/hero/hero-3-tablet.jpg 1x, img/hero/hero-3-tablet@2x.jpg 2x" width="768" height="1034">
+                <img class="hero-card__image" src="img/hero/hero-3-mobile.jpg" srcset="img/hero/hero-3-mobile@2x.jpg 2x" width="320" height="568" alt="Вид на горы Эльбруса">
+              </picture>
+            </li>
+          </ul>
+          <ul class="hero__pagination-list swiper-pagination">
+            <li class="hero__pagination-item">
+              <button class="swiper-pagination-bullet" type="button" aria-label="Смотреть слайд."></button>
+            </li>
+            <li class="hero__pagination-item">
+              <button class="swiper-pagination-bullet" type="button" aria-label="Смотреть слайд."></button>
+            </li>
+            <li class="hero__pagination-item">
+              <button class="swiper-pagination-bullet" type="button" aria-label="Смотреть слайд."></button>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <div data-test="tours">tours</div>
+      <div data-test="training">training</div>
+      <div data-test="about">about</div>
+      <div data-test="reviews">reviews</div>
+      <div data-test="adv">adv</div>
+      <div data-test="gallery">gallery</div>
+      <div data-test="form">form</div>
+    </main>
+    <footer data-test="footer">
+      <section class="contacts" id="contacts">
+        <div class="contacts__container container">
+          <div class="contacts__text-wrapper">
+            <h2 class="contacts__title section-title" data-title="Контакты">Контакты</h2>
+            <p>Свяжитесь с нами любым удобным для вас способом или приходите к нам в гости. Мы будем рады поделиться увлекательными историями и подобрать для вас тур.</p>
+            <ul class="contacts__list">
+              <li class="contacts__item contacts__item--phone">
+                <span>Телефон</span>
+                <a class="contacts__link" href="tel:+79837454545">+7 983 745-45-45</a>
+              </li>
+              <li class="contacts__item contacts__item--email">
+                <span>Email</span>
+                <a class="contacts__link" href="mailto:info@lifetour.com">info@lifetour.com</a>
+              </li>
+              <li class="contacts__item contacts__item--address">
+                <span>Адрес</span>
+                <address class="">г. Москва, пр-т Мира, д. 14, офис 101</address>
+              </li>
+            </ul>
+          </div>
+            <picture>
+            <source type="image/jpg" media="(min-width: 1440px)" srcset="img/map-desktop.jpg, img/map-desktop@2x.jpg 2x" width="600" height="324">
+            <source type="image/jpg" media="(min-width: 768px)" srcset="img/map-tablet.jpg, img/map-tablet@2x.jpg 2x" width="768" height="340">
+            <img class="contacts__map-img" src="img/map-mobile.jpg" srcset="img/map-mobile@2x.jpg 2x" width="320" height="343" alt="Карта с местоположением офиса LIFETOUR.">
+          </picture>
+        </div>
+      </section>
+    </footer>
     <script type="module" src="js/main.js"></script>
   </body>
 

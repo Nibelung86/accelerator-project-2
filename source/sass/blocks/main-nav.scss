@@ -1,0 +1,133 @@
+.main-nav {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  background-color: $color-button-primary;
+
+  @media (min-width: $tablet) {
+    top: 28px;
+  }
+
+  @media (min-width: $desktop) {
+    position: relative;
+    top: 0;
+    width: 838px;
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 145px);
+  display: block;
+  border: none;
+  background: transparent;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+
+  @media (min-width: $tablet) {
+    left: calc(50% - 339px);
+  }
+
+  @media (min-width: $desktop) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle {
+  background: url("/__spritemap#sprite-menu-open-view") no-repeat center;
+}
+
+.main-nav--opened .main-nav__toggle {
+  background: url("/__spritemap#sprite-menu-close-view") no-repeat center;
+}
+
+.main-nav__list {
+  @include list-reset;
+}
+
+.main-nav--closed .main-nav__list {
+  display: none;
+
+  @media (min-width: $desktop) {
+    display: flex;
+    column-gap: 30px;
+    justify-content: center;
+    padding: 24px 0 22px;
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+
+.main-nav--opened .main-nav__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 22px;
+  width: $mobile;
+  margin: 0 auto;
+  padding: 100px 15px 50px;
+
+  @media (min-width: $tablet) {
+    width: $tablet;
+    padding: 67px 45px 70px;
+    row-gap: 26px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 100%;
+    flex-direction: row;
+    column-gap: 30px;
+    justify-content: center;
+    padding: 24px 0 22px;
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+
+.main-nav__link {
+  @include link-reset;
+  position: relative;
+  width: max-content;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  @media (min-width: $desktop) {
+    font-weight: 400;
+    letter-spacing: initial;
+    text-transform: initial;
+  }
+
+  &:hover::after {
+    content: '';
+    position: absolute;
+    left: -5px;
+    bottom: -5px;
+    width: calc(100% + 10px);
+    height: 1px;
+    background-color: $color-white;
+  }
+
+  &:focus {
+    outline: 1px solid $color-white;
+    outline-offset: 5px;
+  }
+
+  &:active {
+    color: $color-button-secondary;
+  }
+
+  &--disabled,
+  &:disabled {
+    color: #999999;
+    pointer-events: none;
+  }
+}
