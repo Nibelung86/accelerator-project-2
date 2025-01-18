@@ -1,0 +1,98 @@
+.review-card__wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  padding: 19px;
+  color: $color-text-primary;
+  background-color: $color-white;
+  border: 1px solid $color-white;
+  box-shadow: 0 0 20px 0 rgba(28, 51, 116, 0.1);
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    column-gap: 30px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 258px 352px;
+    gap: 0 30px;
+  }
+}
+
+.review-card__image {
+  display: block;
+
+  @media (min-width: $tablet) {
+    width: 186px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 258px;
+  }
+}
+
+.review-card__text {
+  position: relative;
+  top: -1px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet) {
+    top: 0;
+    width: 299px;
+    margin-top: 0;
+    justify-content: center;
+  }
+
+  @media (min-width: $desktop) {
+    top: -2px;
+    width: 352px;
+    justify-content: flex-start;
+  }
+}
+
+.review-card__text p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+
+  @media (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.review-card__text p:not(:first-child) {
+  margin-top: 10px;
+}
+
+.review-card__text p:last-child {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  margin: 0;
+  margin-top: 15px;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 12px;
+
+  @media (min-width: $tablet) {
+    row-gap: 6px;
+    margin-top: 26px;
+  }
+
+  @media (min-width: $desktop) {
+    row-gap: 8px;
+    margin-top: 2px;
+  }
+}
+
+.review-card__text > .review-card__name > span {
+  font-weight: 700;
+
+  @media (min-width: $tablet) {
+    font-size: 13px;
+    line-height: 13px;
+  }
+}

@@ -3,6 +3,7 @@
   align-items: center;
   padding: 40px 15px 56px;
   color: $color-white;
+  background-color: $color-text-primary;
 
   @media (min-width: $tablet) {
     padding: 40px 45px 100px;
@@ -76,16 +77,18 @@
 
 .hero-card__tour-link {
   width: 180px;
-  padding: 20px;
+  padding: 19px;
   font-family: inherit;
   font-size: 16px;
   font-weight: 500;
   line-height: 16px;
   text-decoration: none;
+  border: 1px solid transparent;
 }
 
 .hero-card__info-list {
   @include list-reset;
+
   display: none;
 
   @media (min-width: $desktop) {
@@ -106,17 +109,33 @@
   line-height: 16px;
 
   &::before {
-    content: '';
+    content: "";
     width: 12px;
     height: 12px;
   }
 
-  &--duration::before{
+  &--duration::before {
     background: url("/__spritemap#sprite-moon-view") no-repeat center;
   }
 
-  &--level::before{
+  &--level::before {
     background: url("/__spritemap#sprite-level-view") no-repeat center;
   }
 }
 
+.hero-card__photo {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: block;
+    margin-top: 45px;
+  }
+
+  @media (min-width: $desktop) {
+    position: absolute;
+    top: 0;
+    right: -237px;
+    margin: -13px;
+    z-index: -1;
+  }
+}

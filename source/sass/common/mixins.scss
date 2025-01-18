@@ -1,6 +1,7 @@
 @mixin link-reset {
   display: block;
   font-family: inherit;
+  font-style: inherit;
   color: inherit;
   text-decoration: none;
 }

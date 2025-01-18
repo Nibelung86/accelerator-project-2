@@ -1,0 +1,7 @@
+.gallery__container {
+  padding: 20px 0 3px;
+}
+
+.gallery__list {
+  @include list-reset;
+}

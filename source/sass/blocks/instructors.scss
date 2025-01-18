@@ -1,0 +1,39 @@
+.instructors__header {
+  padding: 4px 0 22px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $tablet) {
+    padding: 2px 0 30px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 20px;
+  }
+}
+
+.instructors__title {
+  margin: 0;
+
+  @media (min-width: $tablet) {
+    top: 3px;
+  }
+
+  @media (min-width: $desktop) {
+    top: 4px;
+  }
+}
+
+.instructors__slider-control {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    column-gap: 4px;
+    align-self: flex-end;
+  }
+}
+
+.instructors__list {
+  @include list-reset;
+}

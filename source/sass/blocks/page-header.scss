@@ -2,6 +2,7 @@
   background-color: $color-button-primary;
   color: $color-white;
   position: relative;
+  z-index: 10;
 }
 
 .page-header__container {
@@ -44,6 +45,7 @@
 
 .page-header__phone-link {
   @include link-reset;
+
   position: relative;
   top: 2px;
   margin: 0;
@@ -70,9 +72,6 @@
     opacity: 0.5;
   }
 
-  &:focus {
-    color: $color-text-primary;
-  }
   &:focus {
     color: $color-text-primary;
   }

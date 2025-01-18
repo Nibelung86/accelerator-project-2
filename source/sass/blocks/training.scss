@@ -1,0 +1,41 @@
+.training {
+  color: $color-text-primary;
+}
+
+.training__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  padding: 20px 15px;
+
+  @media (min-width: $tablet) {
+    padding: 40px 45px;
+  }
+
+  @media (min-width: $desktop) {
+    row-gap: 56px;
+    padding-inline: 120px;
+  }
+}
+
+.training__title {
+  margin: 0;
+  padding: 17px 0 16px;
+
+  @media (min-width: $tablet) {
+    padding: 20px 0 17px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 23px 0 15px;
+  }
+}
+
+.training__header p {
+  margin: 0;
+  margin-top: 17px;
+
+  @media (min-width: $desktop) {
+    width: 820px;
+  }
+}

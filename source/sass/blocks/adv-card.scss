@@ -1,0 +1,99 @@
+.adv-card {
+  position: relative;
+  max-width: 290px;
+  padding: 81px 9px 19px;
+  color: $color-text-primary;
+  background-color: $color-white;
+  border: 1px solid rgba(2, 102, 193, 0.1);
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    max-width: 324px;
+    min-height: 340px;
+    padding: 103px 19px 29px;
+  }
+
+  @media (min-width: $desktop) {
+    min-width: 380px;
+    min-height: 329px;
+    padding: 124px 19px 39px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 19px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 42px;
+    height: 42px;
+    border: 1px solid $color-button-primary;
+    background-size: 24px 24px;
+
+    @media (min-width: $tablet) {
+      top: 29px;
+      width: 48px;
+      height: 48px;
+    }
+
+    @media (min-width: $tablet) {
+      top: 39px;
+      width: 54px;
+      height: 54px;
+    }
+  }
+
+  &--safety::before {
+    background: url("/__spritemap#sprite-protect-view") no-repeat center/24px 24px;
+  }
+
+  &--expert::before {
+    background: url("/__spritemap#sprite-crown-view") no-repeat center/24px 24px;
+  }
+
+  &--equipment::before {
+    background: url("/__spritemap#sprite-boots-blue-view") no-repeat center/24px 24px;
+  }
+
+  &--individual::before {
+    background: url("/__spritemap#sprite-route-view") no-repeat center/24px 24px;
+  }
+
+  &--ecology::before {
+    background: url("/__spritemap#sprite-leaf-view") no-repeat center/24px 24px;
+  }
+}
+
+.adv-card h3 {
+  max-width: 240px;
+  margin: 0 auto;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 14px;
+
+  @media (min-width: $tablet) {
+    min-width: 260px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  @media (min-width: $desktop) {
+    min-width: 340px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+.adv-card p {
+  margin: 0;
+  margin-top: 15px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+
+  @media (min-width: $tablet) {
+    margin-top: 14px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}

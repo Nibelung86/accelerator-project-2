@@ -2,4 +2,31 @@
   display: block;
   color: $color-white;
   background-color: $color-button-primary;
+
+  &:hover {
+    color: $color-button-secondary;
+    background-color: $color-white;
+    border-color: $color-button-secondary;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    color: $color-button-secondary;
+    background-color: $color-white;
+    border-color: transparent;
+  }
+
+  &:active {
+    color: $color-white;
+    background-color: $color-button-secondary;
+    border-color: transparent;
+  }
+
+  &--disabled,
+  &:disabled {
+    background-color: #999999;
+    border-color: transparent;
+    pointer-events: none;
+  }
 }
